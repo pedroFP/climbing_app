@@ -1,8 +1,8 @@
-.section
-  .container
-    .columns.is-centered
-      .column.is-half
-        - if notice.present?
-          %p.notice.notification.is-primary= notice
-        - if alert.present?
-          %p.alert.notification.is-danger= alert
+- if notice.present?
+  .notification.is-success.is-light
+    %button.delete{"data-controller" => "notifications"}
+    = notice
+- if alert.present?
+  .notification.is-danger.is-light
+    %button.delete{"data-controller" => "notifications"}
+    = alert
