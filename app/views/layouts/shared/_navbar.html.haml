@@ -14,7 +14,7 @@
       .navbar-item
         .buttons
           - if user_signed_in?
-            = link_to destroy_user_session_path, method: :delete, class: 'button is-danger' do
+            = link_to destroy_user_session_path, data: { "turbo-method": :delete } , class: 'button is-danger' do
               %strong Sign out
           - else
             %a.button.is-primary{href: new_user_registration_path}
