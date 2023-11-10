@@ -74,3 +74,5 @@ end
 gem "cssbundling-rails", "~> 1.3"
 
 gem "devise", "~> 4.9"
+
+gem 'sass-rails'
