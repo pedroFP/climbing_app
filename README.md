@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instead of running the server with
 
-Things you may want to cover:
+```ruby
+$ rails s
+```
 
-* Ruby version
+Prefer using
 
-* System dependencies
+```ruby
+$ bin/dev
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This way the assets are compile each time the asset files changes
