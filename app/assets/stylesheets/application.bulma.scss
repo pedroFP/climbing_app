@@ -36,4 +36,9 @@
 // @import "bulma/sass/layout/hero.sass";
 // @import "bulma/sass/layout/section.sass";
 
-@import 'bulma/bulma';
+@import "bulma/bulma";
+
+.is-orange {
+  background-color: #fe912a;
+  color: #fff;
+}
