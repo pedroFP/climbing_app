@@ -1,0 +1,23 @@
+%nav.navbar{"aria-label" => "main navigation", role: "navigation", "data-controller" => "navbar" }
+  .navbar-brand
+    %a.navbar-item{href: "https://bulma.io"}
+      %img{height: "28", src: "https://bulma.io/images/bulma-logo.png", width: "112"}/
+    %a.navbar-burger{"aria-expanded" => "false", "aria-label" => "menu", "data-target" => "navbarBasicExample", role: "button"}
+      %span{"aria-hidden" => "true"}
+      %span{"aria-hidden" => "true"}
+      %span{"aria-hidden" => "true"}
+  #navbarBasicExample.navbar-menu
+    .navbar-start
+      %a.navbar-item{href: root_path}
+        Home
+    .navbar-end
+      .navbar-item
+        .buttons
+          - if user_signed_in?
+            = link_to destroy_user_session_path, method: :delete, class: 'button is-danger' do
+              %strong Sign out
+          - else
+            %a.button.is-primary{href: new_user_registration_path}
+              %strong Sign up
+            %a.button.is-light{href: new_user_session_path}
+              Log in

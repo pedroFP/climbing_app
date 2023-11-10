@@ -9,8 +9,6 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body
-    = render 'layouts/navbar/navbar'
-    %p.notice= notice
-    %p.alert= alert
-
+    = render 'layouts/shared/navbar'
+    = render 'layouts/shared/notifications' if notice.present? || alert.present?
     = yield
